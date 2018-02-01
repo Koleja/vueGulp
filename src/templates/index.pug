@@ -1,0 +1,35 @@
+doctype html
+html(lang='pl')
+	
+	//- head
+	include includes/global/head.pug
+
+	body
+		.l-app
+			include includes/layout/header.pug
+
+			.l-main
+				#app {{ message }}
+				#app-2
+					span(v-bind:title="message") Hover mouse over
+				#app-3
+					span(v-if="seen") Now you see me
+				#app-4
+					ol
+						li(v-for="tab in tabs") {{ tab.text }}
+				#app-5
+					p {{ message }}
+					button(v-on:click="reverseMessage") Just CLICK
+				#app-6
+					p {{ message }}
+					input(type="text", v-model="message")
+				#app-7
+					ol
+						todo-item(v-for="item in groceryList", v-bind:todo="item", v-bind:key="item.id")
+			
+
+
+			include includes/layout/footer.pug
+			
+	//- foot
+	include includes/global/foot.pug

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+        <link href="css/styles.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="l-app">
+            <header class="l-header"></header>
+            <div class="l-main">
+                <div id="app">{{ message }}</div>
+                <div id="app-2">
+                    <span v-bind:title="message">Hover mouse over</span>
+                </div>
+                <div id="app-3">
+                    <span v-if="seen">Now you see me</span>
+                </div>
+                <div id="app-4">
+                    <ol>
+                        <li v-for="tab in tabs">{{ tab.text }}</li>
+                    </ol>
+                </div>
+                <div id="app-5">
+                    <p>{{ message }}</p>
+                    <button v-on:click="reverseMessage">Just CLICK</button>
+                </div>
+                <div id="app-6">
+                    <p>{{ message }}</p>
+                    <input type="text" v-model="message">
+                </div>
+                <div id="app-7">
+                    <ol>
+                        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+                    </ol>
+                </div>
+            </div>
+            <footer class="l-footer"></footer>
+        </div>
+    </body>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/main.min.js"></script>
+</html>
