@@ -112,7 +112,7 @@ PROJECT.vue = {
         var app = new Vue ({
             el: '#app',
             data: {
-                message: 'Hejka'
+                message: '<span style="color: red;">Hejka</span>'
             }
         })
 

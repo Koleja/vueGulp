@@ -13,7 +13,7 @@
         <div class="l-app">
             <header class="l-header"></header>
             <div class="l-main">
-                <div id="app">{{ message }}</div>
+                <div id="app" v-html="message"></div>
                 <div id="app-2">
                     <span v-bind:title="message">Hover mouse over</span>
                 </div>

@@ -9,7 +9,7 @@ html(lang='pl')
 			include includes/layout/header.pug
 
 			.l-main
-				#app {{ message }}
+				#app(v-html="message")
 				#app-2
 					span(v-bind:title="message") Hover mouse over
 				#app-3
