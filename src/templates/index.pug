@@ -9,6 +9,9 @@ html(lang='pl')
 			include includes/layout/header.pug
 
 			.l-main
+
+				#modal
+					p {{message}}
 				#app(v-html="message")
 				#app-2
 					span(v-bind:title="message") Hover mouse over
